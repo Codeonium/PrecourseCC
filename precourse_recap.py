@@ -1,4 +1,4 @@
-name = input("What is your name? ")
+name = input("What is your name? ").capitalize()
 
 if len(name) < 1:
     print ("Am i not worthy of a name") 
@@ -16,17 +16,20 @@ print (" I'm thinking of a number, from 1 to 6...")
 
 number = input (" Guess what i'm thinking? ")
 
-if int(number) == 1:
-    print("Wrong ..")
-elif int(number) == 2:
-    print("Wrong ..")
-elif int(number) == 3:
-    print("Wrong ..")
-elif int(number) == 4:
-    print("Wrong ..")
-elif int(number) == 5:
-    print("Wrong ..")
-elif int(number) == 6:
-    print("Wrong ..")
-else:
-    print(" Finally you got it right, your number: " + number + " it is the right number. Hey don't blame me... never trust a computer to play fair... Muaaahhhh" )
+while True:
+    if int(number) == 1:
+        number = input("Wrong .. Try again!! What Number Am I Thinking? ")
+    elif int(number) == 2:
+        number = input("Wrong .. Try again!! What Number Am I Thinking? ")
+    elif int(number) == 3:
+        number = input("Wrong .. Try again!! What Number Am I Thinking? ")
+    elif int(number) == 4:
+        number = input(""" 4 ?!?!? I would never do that...
+        Wrong .. Try again!! What Number Am I Thinking? """)
+    elif int(number) == 5:
+        number = input("Wrong .. Try again!! What Number Am I Thinking? ")
+    elif int(number) == 6:
+        number = input("Wrong .. Try again!! What Number Am I Thinking? ")
+    else:
+        print(" Finally you got it right, "+ name +" your number: " + number + " it is the right number. Hey don't blame me... never trust a computer to play fair... Muaaahhhh" )
+        break
